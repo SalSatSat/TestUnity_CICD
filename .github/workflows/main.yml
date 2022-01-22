@@ -28,6 +28,7 @@ jobs:
           key: Library-${{ matrix.targetPlatform }}
           restore-keys: Library-
       - uses: game-ci/unity-builder@v2
+        id: myBuildStep
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
@@ -36,5 +37,5 @@ jobs:
           versioning: Semantic
       - uses: actions/upload-artifact@v2
         with:
-          name: Build-${{ matrix.targetPlatform }}
+          name: Build-${{ matrix.targetPlatform }}_v${{ steps.myBuildStep.outputs.buildVersion }}
           path: build/${{ matrix.targetPlatform }}
