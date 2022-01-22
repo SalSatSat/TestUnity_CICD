@@ -13,11 +13,9 @@ TestUnity_CICD is a project to explore CI/CD for a Unity project
 
 - [Unity](www.unity3d.com) 2020.3.12f1
 
-<!--
 ### Documentation
 
-The user guide can be found [here](./Docs/UserGuide.md)
--->
+The documentation to setup Continuous Integration for Unity projects can be found [here](https://game.ci/docs)
 
 ### Run
 
